@@ -81,13 +81,13 @@ if __name__ == "__main__":
         type=str,
         required=True,
         help="directory containing required input files; e.g., 'Downloads/'. The directory "
-        "should contain both 'cmip_annual_mean_output.nc' and 'vand_annual_mean_output'.",
+        "should contain both 'cmip_annual_mean_output.nc' and 'vand_annual_mean_output.nc'.",
     )
     parser.add_argument(
         "--output-file",
         type=str,
         required=True,
-        help="directory to store the output file; e.g., 'Downloads/regridded_cmip.nc'.",
+        help="Path to store the output file; e.g., 'Downloads/regridded_cmip.nc'.",
     )
     args = parser.parse_args()
 

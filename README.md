@@ -2,7 +2,7 @@
 
 **Author:** Hunter Merrill
 
-This repo contains a short python script for regridding modeled PM 2.5 data to the grid of a satellite imagery dataset.
+This repo contains a short python script for regridding modeled PM 2.5 data to the grid of a satellite imagery dataset. It uses the package `xarray` to bilinearly interpolate each date of the CMIP data to the grid of the satellite data.
 
 ## Usage
 
@@ -25,7 +25,9 @@ git clone git@github.com:hrmerrill/regrid-cmip-pm25.git
 cd regrid-cmip-pm25
 ```
 
-The input NetCDF datasets `cmip_annual_mean_output.nc` and `vand_annual_mean_output.nc` should be in some directory. Mine are in my `~/Downloads/` directory. You'll also need to decide where to save the output file; when I tested this, I used `~/Downloads/output.nc`. Now you can run this script with the following:
+(Or instead of cloning, you could just download the `regrid.py` script. It will work on its own.)
+
+The input NetCDF datasets `cmip_annual_mean_output.nc` and `vand_annual_mean_output.nc` should be in some directory. Mine are in my `~/Downloads/` directory. You'll also need to decide where to save the output file; when I tested this, I used `~/Downloads/output.nc`. Now you can run this script from a terminal with the following command:
 
 ```bash
 python regrid.py --input-dir path/to/inputs/ --output-file path/to/output.nc
